@@ -1,5 +1,3 @@
-import { AgregarPeliculas } from "./components/AgregarPeliculas";
-import { BuscadorPeliculas } from "./components/BuscadorPeliculas";
 import { ListadoPeliculas } from "./components/ListadoPeliculas";
 
 
@@ -35,8 +33,7 @@ function App() {
 
         {/*Barra lateral*/}
         <aside className="lateral">
-           <BuscadorPeliculas/>
-           <AgregarPeliculas/>
+           
 
           
         </aside>
