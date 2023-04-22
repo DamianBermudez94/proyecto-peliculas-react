@@ -1,11 +1,13 @@
 import { AgregarPeliculas } from "./components/AgregarPeliculas";
 import { BuscadorPeliculas } from "./components/BuscadorPeliculas";
 import { ListadoPeliculas } from "./components/ListadoPeliculas";
-
+import { useState } from "react";
 
 function App() {
+      // Creamos un estado para poder obtener los datos asi lo podemos mostrar por pantalla
+      const [listadoPeliculasState, setListadoPeliculasState ] = useState([]);
   return (
-   
+      
     <div className="layout">
         {/*Cabecera*/}
         <header className="header">
@@ -30,13 +32,17 @@ function App() {
         <section id="content" className="content">
 
             {/*aqui van las peliculas*/}
-         <ListadoPeliculas/>
+         <ListadoPeliculas 
+                listadoPeliculasState={listadoPeliculasState} setListadoPeliculasState={setListadoPeliculasState}
+        />
         </section>
 
         {/*Barra lateral*/}
         <aside className="lateral">
            <BuscadorPeliculas/>
-           <AgregarPeliculas/>
+           <AgregarPeliculas 
+                setListadoPeliculasState={setListadoPeliculasState}
+            />
 
           
         </aside>
