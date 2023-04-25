@@ -1,6 +1,6 @@
 # proyecto-peliculas
 
-Maquetación de una SPA de peliculas con algunos estilos visuales para luego darle funcionalidad con JavaScript y React
+Maquetación de una web app de peliculas con algunos estilos visuales para luego darle funcionalidad con JavaScript y React
 
 Tegnologias de la maquetación:
 
