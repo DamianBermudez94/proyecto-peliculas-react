@@ -27,12 +27,12 @@ export const ListadoPeliculas = ({setListadoPeliculasState,listadoPeliculasState
    
       // Filtrar peliculas para que elimine del LocalStorage
       let newPeliculas = pelisAlmacenadas.filter( peli=> peli.id !== parseInt(id));
-
+      console.log("soy las nuevas peliculas",newPeliculas);
       // Actualizar estado del listado
       setListadoPeliculasState(newPeliculas);
 
       // Actualizar los datos del LocalStorage
-      localStorage.setItem("pelis",JSON.stringify(newPeliculas));
+      localStorage.setItem("pelis",newPeliculas);
     }
 
   return (

@@ -2,11 +2,7 @@ import React, { useState } from 'react'
 
 export const BuscadorPeliculas = ({listadoPeliculasState,setListadoPeliculasState}) => {
 
-  // Estado para la busqueda
   const [busqueda, setBusqueda] = useState("");
-
-  // Estado para chequear si esta buscando correctamente
-  const [noEncontrado, setNoEncontrado] = useState(false);
 
   const buscarPeli = (e)=>{
     // creamos y actualizamo estado
@@ -25,19 +21,13 @@ export const BuscadorPeliculas = ({listadoPeliculasState,setListadoPeliculasStat
 
     if (busqueda.length <= 1 ||  pelisEncontradas <= 0 ) {
       pelisEncontradas = JSON.parse(localStorage.getItem("pelis"));
-      setNoEncontrado(true);
-    }else{
-      setNoEncontrado(false)
     }
-    // Seteamos el estado con las peliculas buscadas
-    setListadoPeliculasState(pelisEncontradas)
+
+setListadoPeliculasState(pelisEncontradas)
   }
   return (
     <div className="search">
         <h3 className="title">Buscador:{busqueda}</h3>
-        {(noEncontrado === true && busqueda.length >1) &&(
-          <span className='no-encontrado'>No se ha encontrado ninguna pelicula</span>
-        )}
         <form >
             <input  type="text" 
                     id="search_field"

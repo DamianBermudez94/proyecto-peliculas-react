@@ -13,7 +13,7 @@ export const ListadoPeliculas = ({setListadoPeliculasState,listadoPeliculasState
      
     // Funcion para obtener las peliculas del localStorage
     const obtenerPeliculas =()=>{
-      let peliculas = JSON.parse(localStorage.getItem("pelis"));
+      let peliculas = localStorage.getItem("pelis");
       console.log("soy las peliculas",peliculas);
       setListadoPeliculasState(peliculas);
       return peliculas;
@@ -52,8 +52,6 @@ export const ListadoPeliculas = ({setListadoPeliculasState,listadoPeliculasState
                     editar === peli.id && (
                       <Editar peli={peli}
                               obtenerPeliculas={obtenerPeliculas}
-                              setEditar={setEditar}
-                              setListadoPeliculasState={setListadoPeliculasState}
                       />
                     )
                   }

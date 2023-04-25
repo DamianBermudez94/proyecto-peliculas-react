@@ -52,8 +52,6 @@ export const ListadoPeliculas = ({setListadoPeliculasState,listadoPeliculasState
                     editar === peli.id && (
                       <Editar peli={peli}
                               obtenerPeliculas={obtenerPeliculas}
-                              setEditar={setEditar}
-                              setListadoPeliculasState={setListadoPeliculasState}
                       />
                     )
                   }

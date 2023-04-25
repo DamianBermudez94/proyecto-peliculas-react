@@ -54,7 +54,7 @@ export const ListadoPeliculas = ({setListadoPeliculasState,listadoPeliculasState
                               obtenerPeliculas={obtenerPeliculas}
                               setEditar={setEditar}
                               setListadoPeliculasState={setListadoPeliculasState}
-                      />
+                                                                          />
                     )
                   }
               </article>

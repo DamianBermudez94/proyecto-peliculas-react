@@ -25,7 +25,7 @@ export const BuscadorPeliculas = ({listadoPeliculasState,setListadoPeliculasStat
 
     if (busqueda.length <= 1 ||  pelisEncontradas <= 0 ) {
       pelisEncontradas = JSON.parse(localStorage.getItem("pelis"));
-      setNoEncontrado(true);
+      setBusqueda(true);
     }else{
       setNoEncontrado(false)
     }
@@ -36,7 +36,7 @@ export const BuscadorPeliculas = ({listadoPeliculasState,setListadoPeliculasStat
     <div className="search">
         <h3 className="title">Buscador:{busqueda}</h3>
         {(noEncontrado === true && busqueda.length >1) &&(
-          <span className='no-encontrado'>No se ha encontrado ninguna pelicula</span>
+          <span className='no-encontrado'>No se ha encontrado la pelicula</span>
         )}
         <form >
             <input  type="text" 

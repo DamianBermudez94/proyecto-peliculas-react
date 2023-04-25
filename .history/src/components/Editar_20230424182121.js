@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Editar = ({peli, obtenerPeliculas,setEditar, setListadoPeliculasState}) => {
+export const Editar = ({peli, obtenerPeliculas,setEditar,                       setListadoPeliculasState}) => {
     const titleComponent = "Editar pelicula";
     const editarPeliculas = (e, id)=>{
         // Evitamos que el formulario recargue la web
@@ -27,10 +27,14 @@ export const Editar = ({peli, obtenerPeliculas,setEditar, setListadoPeliculasSta
         pelisAlmacenadas[indice]= peliActualizada;
 
         // Guardar el nuevo array de objeto en el LocalStorage
-        localStorage.setItem("pelis", JSON.stringify(pelisAlmacenadas));
+        localStorage.setItem("pelis",JSON.stringify(pelisAlmacenadas));
+
         // Actulizar estado para que se modifique el componente y se cierre el formulario
+        
         setListadoPeliculasState(pelisAlmacenadas);
-        setEditar(0);
+        
+        // le pasamos como parametro el valor 0 para que cierre el formulario
+        setEditar(0)
     }
   return (
     <div className='edit-form'>
